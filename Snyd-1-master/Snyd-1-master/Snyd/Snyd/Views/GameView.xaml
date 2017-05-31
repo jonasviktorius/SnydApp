@@ -5,8 +5,12 @@
   <StackLayout Padding="20">
       <Label Text="Snyd" FontSize="32" HorizontalTextAlignment="Center"></Label>
       <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
-        <Entry Text="Vælg dit nummer" Keyboard="Numeric"><Button x:Name="DiceValueBtn" Text="Vælg" FontSize="20"></Button></Entry>
-      <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
+        <!--<Label Text="Vælg dit nummer">-->
+            <Entry Keyboard="Numeric">
+                <Button x:Name="DiceValueBtn" Text="Vælg" FontSize="20"></Button>
+            </Entry>
+        <!--</Label>-->
+        <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
       <Entry Text="Vælg dit nummer" Keyboard="Numeric">
           <Button x:Name="DicesBtn" Text="Vælg" FontSize="20"></Button>
       </Entry>

@@ -19,7 +19,7 @@ namespace Snyd.Views
 
         private void ChooseGame_OnClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Navigation.PushAsync(new GameView());
         }
     }
 }

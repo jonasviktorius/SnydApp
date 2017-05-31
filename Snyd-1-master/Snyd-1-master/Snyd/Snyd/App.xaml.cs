@@ -10,7 +10,7 @@ namespace Snyd
 			InitializeComponent();
 
 		    //MainPage = new MainMenu();
-            MainPage = new NavigationPage(new Views.GameView());
+            MainPage = new NavigationPage(new Views.MainMenu());
 		}
 
 		protected override void OnStart()
