@@ -1,0 +1,2 @@
+# Snyd
+Android og iOS

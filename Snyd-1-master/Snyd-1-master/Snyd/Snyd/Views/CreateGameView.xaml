@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Snyd.Views.CreateGameView">
+    <Label Text="Opret et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>
+    <Label Text="Opret et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>
+
+    <Label Text="Spilnavn: " HorizontalTextAlignment="Center" FontSize="20"></Label>
+    <Label Text="" HorizontalTextAlignment="Center" FontSize="20"></Label>
+    <Label Text="" HorizontalTextAlignment="Center" FontSize="32"></Label>
+    <Label Text="" HorizontalTextAlignment="Center" FontSize="32"></Label>
+    <Button x:Name="CreateBtn" Text="Opret" VerticalOptions="Center" FontSize="24" Clicked="CreateBtn_OnClicked"></Button>
+</ContentPage>

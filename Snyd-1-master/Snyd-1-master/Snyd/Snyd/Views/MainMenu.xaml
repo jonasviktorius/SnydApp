@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Snyd.Views.MainMenu">
+    <StackLayout VerticalOptions="Start">
+        <Label Text="Velkommen til Snyd" HorizontalTextAlignment="Center" FontSize="32"></Label>
+        <Label Text="Terningspillet, hvor du skal snyde dine venner" HorizontalTextAlignment="Center" FontSize="24"></Label>
+        <Label Text="" HorizontalTextAlignment="Center" FontSize="32"></Label>
+        <Label Text="" HorizontalTextAlignment="Center" FontSize="32"></Label>
+        <Button x:Name="CreateGameBtn" Text="Opret Spil" VerticalOptions="Center" FontSize="20" Clicked="CreateGameBtn_Clicked"/>
+        <Label Text="" HorizontalTextAlignment="Center" FontSize="28"></Label>
+        <Button x:Name="FindGameBtn" Text="Find Spil" VerticalOptions="Center" FontSize="20" Clicked="FindGameBtn_Clicked"/>
+
+    </StackLayout>
+</ContentPage>

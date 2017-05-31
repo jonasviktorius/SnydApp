@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Snyd.Views.GameView">
+  <StackLayout Padding="20">
+      <Label Text="Snyd" FontSize="32" HorizontalTextAlignment="Center"></Label>
+      <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
+        <Entry Text="Vælg dit nummer" Keyboard="Numeric"><Button x:Name="DiceValueBtn" Text="Vælg" FontSize="20"></Button></Entry>
+      <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
+      <Entry Text="Vælg dit nummer" Keyboard="Numeric">
+          <Button x:Name="DicesBtn" Text="Vælg" FontSize="20"></Button>
+      </Entry>
+
+    </StackLayout>
+</ContentPage>
