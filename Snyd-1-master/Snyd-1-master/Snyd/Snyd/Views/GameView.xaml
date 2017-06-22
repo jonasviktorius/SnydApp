@@ -5,15 +5,26 @@
   <StackLayout Padding="20">
       <Label Text="Snyd" FontSize="32" HorizontalTextAlignment="Center"></Label>
       <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
+        <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
+
+        <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
+
+        
+
+        
+
+              <Label Text="Antal" FontSize="24" HorizontalTextAlignment="Center"></Label>
+
         <!--<Label Text="Vælg dit nummer">-->
             <Entry Keyboard="Numeric">
-                <Button x:Name="DiceValueBtn" Text="Vælg" FontSize="20"></Button>
             </Entry>
+
         <!--</Label>-->
-        <Label Text="" FontSize="32" HorizontalTextAlignment="Center"></Label>
-      <Entry Text="Vælg dit nummer" Keyboard="Numeric">
-          <Button x:Name="DicesBtn" Text="Vælg" FontSize="20"></Button>
+        <Label Text="Øjne" FontSize="24" HorizontalTextAlignment="Center"></Label>
+      <Entry Text="" Keyboard="Numeric">
       </Entry>
+
+        <Button x:Name="SendBtn" Text="Send" FontSize="28"></Button>
 
     </StackLayout>
 </ContentPage>

@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Net.Http;
 using System.Net;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace Snyd.ViewModel
 {
@@ -27,7 +28,7 @@ namespace Snyd.ViewModel
 
         }
 
-        public List<Game> FindSpil()
+        public IEnumerable<Game> FindSpil()
         {
             using (var client = new HttpClient(handler))
             {
@@ -35,19 +36,23 @@ namespace Snyd.ViewModel
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = client.GetAsync("api/game/discover").Result;
+                var response = client.GetAsync("api/game/discovergame").Result;
 
                 if(response.IsSuccessStatusCode)
                 {
-                    //var gameList = response.Content.ReadAsStringAsync<Game>().Result;
+                    string gameListJson = response.Content.ReadAsStringAsync().Result;
+                    IEnumerable<Game> gameList =
+                       JsonConvert.DeserializeObject<IEnumerable<Game>>(gameListJson);
                     //var games = Newtonsoft.JsonConvert < List<Game>(response.ReadAsString);
-
+                    return gameList;
                 }
                 return null;
+
             }
+
         }
 
-       
+
 
         //var games = NewtonSoft.JsonConvert < List<Game>(response.ReadAsString)
 

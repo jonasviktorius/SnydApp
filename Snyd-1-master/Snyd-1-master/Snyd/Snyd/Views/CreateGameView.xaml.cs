@@ -19,7 +19,6 @@ namespace Snyd.Views
 
         private void CreateBtn_OnClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
     }
 }

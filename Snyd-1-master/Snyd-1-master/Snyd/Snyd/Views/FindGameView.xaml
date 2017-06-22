@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Snyd.Views.FindGameView">
-    <Label Text="Opret et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>
-    <!--<Label Text="Find et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>-->
+    
+    <ListView x:Name="GameList" ItemsSource="{Binding SnydViewModel.gameListJson}"></ListView>
+    <!--<Label Text="Opret et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>
+    --><!--<Label Text="Find et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>-->
     <Label Text="GameId: 1, Participants:[PersonId: 3, Name: Anders], RoundNumber: 0, IsOngoing:false, IsActive:true" HorizontalTextAlignment="Center" FontSize="24"></Label>
     <Label Text="GameId: 3, Participants:[PersonId: 4, Name: Tim], RoundNumber: 0, IsOngoing:false, IsActive:true" HorizontalTextAlignment="Center" FontSize="24"></Label>
     <Label Text="GameId: 5, Participants:null, RoundNumber: 0, IsOngoing:false, IsActive:true" HorizontalTextAlignment="Center" FontSize="24" ></Label>
