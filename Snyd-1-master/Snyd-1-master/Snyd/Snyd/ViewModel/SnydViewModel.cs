@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Net.Http;
 using System.Net;
+using System.Net.Http.Headers;
 
 namespace Snyd.ViewModel
 {
@@ -16,7 +17,7 @@ namespace Snyd.ViewModel
         //public Game game;
         //public ICommand CreateCommand { get; set; }
         const string serverUrl = "http://localhost:1182/";
-        //HttpClientHandler handler; 
+        HttpClientHandler handler;
         public event PropertyChangedEventHandler PropertyChanged;
 
         //public ObservableCollection<Game> games { get; set; }
@@ -26,14 +27,29 @@ namespace Snyd.ViewModel
 
         }
 
-        public Game FindSpil()
+        public List<Game> FindSpil()
         {
-            using (var client = new HttpClient)
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(serverUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var response = client.GetAsync("api/game/discover").Result;
+
+                if(response.IsSuccessStatusCode)
+                {
+                    //var gameList = response.Content.ReadAsStringAsync<Game>().Result;
+                    //var games = Newtonsoft.JsonConvert < List<Game>(response.ReadAsString);
+
+                }
+                return null;
+            }
         }
 
-        var response = System.Net.HttpClient.Get("localhost:1182/api/game/discover")
+       
 
-        var games = NewtonSoft.JsonConvert < List<Game>(response.ReadAsString)
+        //var games = NewtonSoft.JsonConvert < List<Game>(response.ReadAsString)
 
         //[NotifyPropertyChangedInvocator]
         //protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
