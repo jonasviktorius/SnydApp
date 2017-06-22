@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Snyd.Views.CreateGameView">
     <Label Text="Opret et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>
-    <Label Text="Opret et spil" HorizontalTextAlignment="Center" FontSize="32"></Label>
 
     <Label Text="Spilnavn: " HorizontalTextAlignment="Center" FontSize="20"></Label>
     <Label Text="" HorizontalTextAlignment="Center" FontSize="20"></Label>

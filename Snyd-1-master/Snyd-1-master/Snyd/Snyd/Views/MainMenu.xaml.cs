@@ -16,12 +16,10 @@ namespace Snyd.Views
         {
             InitializeComponent();
         }
-
         private void CreateGameBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CreateGameView());
         }
-
         private void FindGameBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new FindGameView());
